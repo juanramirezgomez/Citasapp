@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Configuración</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item>
+    <ion-label>¿Permitir borrar citas?</ion-label>
+    <ion-toggle [(ngModel)]="puedeBorrar"></ion-toggle>
+  </ion-item>
+
+  <ion-button expand="full" (click)="guardarConfiguracion()">Guardar Configuración</ion-button>
+
+  <ion-button expand="full" color="medium" routerLink="/citas">
+    Volver al Inicio
+  </ion-button>
+
+</ion-content>

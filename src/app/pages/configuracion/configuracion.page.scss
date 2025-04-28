@@ -1,0 +1,28 @@
+ion-content {
+    --background: #121212;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  ion-item {
+    --background: #1e1e1e;
+    width: 90%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  ion-toggle {
+    --handle-background: #4caf50;
+    --handle-border-radius: 50%;
+  }
+  
+  ion-button {
+    width: 200px;
+    align-self: center;
+    margin-top: 10px;
+  }
+  

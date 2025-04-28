@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Citas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div *ngIf="cita; else sinCitas">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ cita.frase }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <strong>{{ cita.autor }}</strong>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button expand="block" size="small" (click)="cargarCitaAleatoria()">
+      Otra Cita
+    </ion-button>
+
+    <ion-button *ngIf="puedeBorrar" expand="block" size="small" color="danger" (click)="eliminarCitaActual()">
+      Eliminar esta Cita
+    </ion-button>
+
+    <ion-button expand="block" size="small" color="tertiary" routerLink="/gestion-citas">
+      Gestionar Citas
+    </ion-button>
+  </div>
+
+  <ng-template #sinCitas>
+    <p>No hay citas registradas.</p>
+    <ion-button expand="block" size="small" routerLink="/gestion-citas">
+      Agregar Citas
+    </ion-button>
+  </ng-template>
+
+</ion-content>

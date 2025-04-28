@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Gestionar Citas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <form #formulario="ngForm" (ngSubmit)="guardarCita(formulario)">
+    <ion-item>
+      <ion-label position="floating">Frase</ion-label>
+      <ion-input [(ngModel)]="frase" name="frase" required minlength="5"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Autor</ion-label>
+      <ion-input [(ngModel)]="autor" name="autor" required minlength="2"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" size="small" type="submit">
+      Guardar Cita
+    </ion-button>
+  </form>
+
+  <ion-button expand="block" size="small" color="medium" routerLink="/citas">
+    Volver a Inicio
+  </ion-button>
+
+  <ion-button expand="block" size="small" color="tertiary" routerLink="/configuracion">
+    Ir a Configuración
+  </ion-button>
+
+</ion-content>
